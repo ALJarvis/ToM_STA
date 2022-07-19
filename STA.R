@@ -80,9 +80,6 @@ do_think <- do_think[ , -which(names(do_think) %in% c("correct_response","sub_ca
 #re-arrange data to wide format
 do_think <- do_think %>%
   spread(key = corr_cat, value = meanEndorse)  
-View(do_think)
-do_think <- do_think %>%
-  spread(key = corr_cat, value = meanEndorse)  
 
 #change dataframe to match with the STA sample data
 do_think <- data.frame(do_think)
